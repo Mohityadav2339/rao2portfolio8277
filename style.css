@@ -149,6 +149,47 @@ a{
     gap: 3rem;
 }
 
+.footer-section{
+    background-color: black;
+    padding: 4rem 4rem;
+    margin-top: 4rem ;
+}
+
+.social{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 3rem;
+    justify-content: center;
+
+    & a{
+        color: white;
+        text-decoration: none;
+        
+        text-transform: uppercase;
+        display: inline-block;
+    }
+    
+
+    & img{
+        border-radius: 50%;
+    }
+}
+.social a:hover{
+    color: yellow;
+    
+   
+}
+
+.contact{
+    color: white;
+    margin: 2rem 4rem;
+    padding: 2rem 4rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 @media ( width <= 700px){
     .navbar{
         flex-direction: column;
@@ -167,6 +208,14 @@ a{
         grid-template-columns: repeat(2,1fr);
         box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 
+    }
+    .social{
+        grid-template-columns: repeat( auto-fit, minmax(250px, 300px) );
+    }
+    .contact{
+        align-items: start;
+        padding: 0 1rem;
+        margin-top: 4rem;
     }
     
     
@@ -204,5 +253,8 @@ a{
     }
     .skills-cols{
         text-align: left;
+    }
+    .social{
+        grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
     }
 }
